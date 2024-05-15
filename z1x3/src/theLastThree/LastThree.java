@@ -38,10 +38,6 @@ public class LastThree {
     	LastNum = 0;
     	PenuNum = 0;
     	ThirdLastNum = 0;
-
-    	if (NewValue) {
-    	    counter++;
-    	}
     	
     }//method()
     
