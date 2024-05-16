@@ -32,36 +32,24 @@ public class FirPrinter {
      * @param height height of fir
      */
     public void printFir( int height ){
-        //vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-        //###
-        //###
-        //###
-        //###           HIER kommt Ihr Code hin
-        //###
-        //###                    VVVV
-        //###                    VVVV
-        //###                    VVVV
-        //###   VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###      VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###         VVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###            VVVVVVVVVVVVVVVVVVVV
-        //###               VVVVVVVVVVVVVV
-        //###                  VVVVVVVV
-        //###                     VV
         
+        // Lösung von Laurin - nicht meine. Eigene Lösung finden. 
         
+        for (int i = 0; i < height; i++) {
+            
+            for (int j = 1; j < (height * 2) - 1; j++) {
+                
+                if (j >= height - i && j <= height ) {
+                    System.out.printf("*");
+                }
+                
+                System.out.printf(" ");
+            }
+            
+            System.out.printf("\n");
+            
+        }
         
-        // Fügen Sie hier Ihren Code ein
-        // bzw. ersetzen Sie diesen Kommentar durch Ihren Code.
-        // ...
-        
-        
-        
-        //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        // Sofern Sie kein Vorwissen haben und/oder NICHT wissen was Sie tun
-        // führen Sie KEINE! Änderungen unterhalb dieser Zeilen durch.
-        //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        //
     }//method()
     
 }//class

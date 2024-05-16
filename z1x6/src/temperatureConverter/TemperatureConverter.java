@@ -1,65 +1,51 @@
-// This source code is UTF-8 coded - see https://stackoverflow.com/questions/9180981/how-to-support-utf-8-encoding-in-eclipse
 package temperatureConverter;
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * Wir erinnern uns: NIEMALS verschiedene Sprachen in einem Programm mixen.
+ * Wir erinnern uns: NIEMALS verschiedene Spachen in einem Programm mixen.
  * Oder konkreter: Entweder Code, Variablen und Kommentar in deutsch oder in englisch.
  * Es gelten die in der Vorlesung besprochenen Regeln.
  * Es lohnt sich immer, die Vorlesungsinhalte zu kennen ;-)
  * 
  * Auch ist diese Art von Kommentar KEIN guter Kommentar.
- * Wir nutzen den Kommentar "hier" für Erklärungen und Ausführungen zur
+ * Wir nutzen den Kommentar "hier" fuer Erklaerungen und Ausfuehrungen zur
  * Aufgabenstellung. Es  gilt "hier" die Regel:
  *  o) "Kommentar" der Kommentar ist in englisch.
  *  o) "Kommentar" der die Aufgabenstellung vertieft in deutsch.
- *     Löschen Sie derartigen Kommentar vor der Abgabe.
+ * Loeschen Sie derartigen Kommentar vor der Abgabe.
  * 
- * Im Rahmen der Aufgabenstellung müssen Sie GUTEN Kommentar schreiben.
+ * Im Rahmen der Aufgabenstellung muessen Sie GUTEN Kommentar schreiben.
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 
 
 /**
- * {@link TemperatureConverter} - see task.
+ * Temperature Converter - see task
  * 
  * @author   (your name(s)) 
  * @version  (a version number or a date)
  */
 public class TemperatureConverter {
-    
+
     /**
      * printing table
      */
     public void printTable(){
-        //vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-        //###
-        //###
-        //###
-        //###           HIER kommt Ihr Code hin
-        //###
-        //###                    VVVV
-        //###                    VVVV
-        //###                    VVVV
-        //###   VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###      VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###         VVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###            VVVVVVVVVVVVVVVVVVVV
-        //###               VVVVVVVVVVVVVV
-        //###                  VVVVVVVV
-        //###                     VV
-        
-        
-        
-        // Fügen Sie hier Ihren Code ein
-        // bzw. ersetzen Sie diesen Kommentar durch Ihren Code.
-        // ...
-        
-        
-        
-        //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        // Sofern Sie kein Vorwissen haben und/oder NICHT wissen was Sie tun
-        // führen Sie KEINE! Änderungen unterhalb dieser Zeilen durch.
-        //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        //
-    }//method()
-    
-}//class
+        System.out.println("Temperatur-Umrechnungstabelle");
+        System.out.println("==============================");
+        System.out.println("  C   F");
+        System.out.println("---------");
+
+
+        // Wiederholen Sie über die Temperatur in Celsius von 0 bis 100 Grad
+        for (int i = 0; i <= 100; i += 3) {
+            
+            double celsius = i;
+            
+            // Berechnen Sie die Temperatur in Fahrenheit
+            double  fahrenheit = (celsius * 9.0F / 5.0F) + 32.0F + 0.5F;
+
+            // Geben die Temperatur in Celsius und Fahrenheit aus
+            System.out.printf("%3.0f"+ "  " + "%3.0f%n", celsius, fahrenheit);
+
+        } // for
+    } // method()
+} //class
