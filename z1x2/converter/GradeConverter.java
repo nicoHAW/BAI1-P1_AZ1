@@ -21,11 +21,11 @@ package converter;
 /**
  * {@link GradeConverter} - see task.
  * 
- * @author   (your name(s)) 
- * @version  (a version number or a date)
+ * @author   Nico Pätzel 
+ * @version  2024/08/06
  */
 public class GradeConverter {
-    
+
     /**
      * Converts "Notenpunkte"  into old german "Schulnote"
      * 
@@ -33,42 +33,42 @@ public class GradeConverter {
      * @return    old german "Schulnote"
      */
     public String convertGrade( final int np ){
-        //vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-        //###
-        //###
-        //###
-        //###           HIER kommt Ihr Code hin
-        //###
-        //###                    VVVV
-        //###                    VVVV
-        //###                    VVVV
-        //###   VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###      VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###         VVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###            VVVVVVVVVVVVVVVVVVVV
-        //###               VVVVVVVVVVVVVV
-        //###                  VVVVVVVV
-        //###                     VV
-        
-        
-        
-        // Fügen Sie hier Ihren Code ein
-        // bzw. ersetzen Sie diesen Kommentar durch Ihren Code.
-        // ...
-        
-        
+
         // "Code-Vorgabe"
-        
-        
+
+
         // Deklaration und Initialisierung
         String result = "";
-        
-        
-        //...
+
+
         // rechne NP um und speichere das Ergebnis in result
-        //...
-        
-        
+
+        //Assert
+        assert (np >= 0  && np <=15): "Assert: Please enter valid Number between 0 and 15";
+
+        switch ( np ) {
+
+            case 15: result = "1+"; break;
+            case 14: result = "1"; break;
+            case 13: result = "1-"; break;
+            case 12: result = "2+"; break;
+            case 11: result = "2"; break;
+            case 10: result = "2-"; break;
+            case 9: result = "3+"; break;
+            case 8: result = "3"; break;
+            case 7: result = "3-"; break;
+            case 6: result = "4+"; break;
+            case 5: result = "4"; break;
+            case 4: result = "4-"; break;
+            case 3: result = "5+"; break;
+            case 2: result = "5"; break;
+            case 1: result = "5-"; break;
+            case 0: result = "6"; break;
+
+            default: return "Not a valid Number.";
+        }
+
+
         return result;
         //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         // Sofern Sie kein Vorwissen haben und/oder NICHT wissen was Sie tun
@@ -76,5 +76,5 @@ public class GradeConverter {
         //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         //
     }//method()
-    
+
 }//class
