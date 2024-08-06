@@ -21,11 +21,11 @@ package requiredBitSizeComputer;
 /**
  * {@link RequiredBitSizeComputer} - see task.
  * 
- * @author   (your name(s)) 
- * @version  (a version number or a date)
+ * @author   Nico Pätzel 
+ * @version  2024/08/06 Version 1
  */
 public class RequiredBitSizeComputer {
-    
+
     /**
      * compute required bit size to code positive number
      * 
@@ -33,41 +33,23 @@ public class RequiredBitSizeComputer {
      * @return required bit size to compute number
      */
     public int computeBitSize( final long number ){
-        //vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-        //###
-        //###
-        //###
-        //###           HIER kommt Ihr Code hin
-        //###
-        //###                    VVVV
-        //###                    VVVV
-        //###                    VVVV
-        //###   VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###      VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###         VVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###            VVVVVVVVVVVVVVVVVVVV
-        //###               VVVVVVVVVVVVVV
-        //###                  VVVVVVVV
-        //###                     VV
-        
-        
-        
-        
-        // Fügen Sie hier Ihren Code ein
-        // bzw. ersetzen Sie diesen Kommentar durch Ihren Code.
-        // ...
-        
-        
+
+        //assert: No negative Numbers allowed
+        assert ( number >= 0 ) : "No negative Numbers allowed.";
+
+        long tmpNumber = number; //temporary number.
+
         // "Code-Vorgabe":
-        
+
         int resu;
         resu = 0;
-        
-        
+
         // berechne die Anzahl der benötigten Bits um number zu codieren
-        
-        
-        
+        do {
+            tmpNumber = tmpNumber/2;
+            resu++;
+        } while ( tmpNumber >= 1 );
+
         return resu;
         //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         // Sofern Sie kein Vorwissen haben und/oder NICHT wissen was Sie tun
@@ -75,5 +57,5 @@ public class RequiredBitSizeComputer {
         //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         //
     }//method()
-    
+
 }//class
