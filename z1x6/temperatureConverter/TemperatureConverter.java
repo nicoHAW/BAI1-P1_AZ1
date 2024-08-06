@@ -21,8 +21,8 @@ package temperatureConverter;
 /**
  * {@link TemperatureConverter} - see task.
  * 
- * @author   (your name(s)) 
- * @version  (a version number or a date)
+ * @author   Nico Pätzel 
+ * @version  2024/08/06 Version 1
  */
 public class TemperatureConverter {
     
@@ -30,28 +30,31 @@ public class TemperatureConverter {
      * printing table
      */
     public void printTable(){
-        //vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-        //###
-        //###
-        //###
-        //###           HIER kommt Ihr Code hin
-        //###
-        //###                    VVVV
-        //###                    VVVV
-        //###                    VVVV
-        //###   VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###      VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###         VVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###            VVVVVVVVVVVVVVVVVVVV
-        //###               VVVVVVVVVVVVVV
-        //###                  VVVVVVVV
-        //###                     VV
+        //Deklarieren
+        int tempCelsius;
+        int tempFahrenheit;
+        
+      //initi
+        tempCelsius = 0;
+        tempFahrenheit = 0;
         
         
+        System.out.printf( "Temperatur-Umrechnungstabele\n" );
+        System.out.printf( "=============================\n" );
+        System.out.printf( "C          F\n" );
+        System.out.printf( "------------\n" );
         
-        // Fügen Sie hier Ihren Code ein
-        // bzw. ersetzen Sie diesen Kommentar durch Ihren Code.
-        // ...
+        while ( tempCelsius < 100 ) {
+        
+            //covert temp plus 0,5 for Intervall
+            tempFahrenheit = (int) (tempCelsius * ((double) 9/5) + 32 + 0.5); 
+            
+            System.out.printf( "%4d     %4d\n", tempCelsius, tempFahrenheit );
+            
+            tempCelsius += 3;
+            
+        }//print Method.
+        
         
         
         
