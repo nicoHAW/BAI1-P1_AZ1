@@ -33,12 +33,14 @@ package fibonacci;
 public class FibonacciNumberPrinter {
 
     /**
-     * printing first Fibonacci numbers
+     * printing first Fibonacci numbers. 
      * 
-     * @param wantedNumberOfFibonacciNumbers  number of Fibonacci numbers to be printed
+     * @param wantedNumberOfFibonacciNumbers  number of Fibonacci numbers to be printed - Number has to be positive.
      *                                        starting with first Fibonacci number
      */
     public void printFirstFibonacciNumbers( final int wantedNumberOfFibonacciNumbers ){
+        //checks if wanted FibuNumber is positive. 
+        assert (wantedNumberOfFibonacciNumbers >= 0) : "Pleaser enter positive Number >= 0";
 
         //Deklarieren
         int fibu1 = 0;
@@ -46,14 +48,21 @@ public class FibonacciNumberPrinter {
         int currentFibu = 0;       
 
         for ( int index = 0; index < wantedNumberOfFibonacciNumbers; index++ ) {
-            //add Currentfibu
+            //math for Fibunacci
             fibu1 = fibu2;
             fibu2 = currentFibu;
             currentFibu = fibu1 + fibu2;
-        
+
+            //Assert that checks if current Value is still within values of an int.
+            if (Integer.MAX_VALUE - fibu1 < fibu2) {
+                System.out.printf("\n\n Danger: Values leaves valid Area of ints\n\n");
+                assert (Integer.MAX_VALUE - fibu1 > fibu2) : "Please enter smaller Number or change to Long or Double.";
+            }
+            
+            
             //print
             System.out.printf("%3d ", currentFibu);
-            
+
             if (index == 0) fibu2++;
             
         }//for 
