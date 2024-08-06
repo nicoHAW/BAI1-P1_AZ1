@@ -27,11 +27,11 @@ package fibonacci;
 /**
  * {@link FibonacciNumberPrinter} - see task.
  * 
- * @author   (your name(s)) 
- * @version  (a version number or a date)
+ * @author   Nico Pätzel
+ * @version  2024/08/06
  */
 public class FibonacciNumberPrinter {
-    
+
     /**
      * printing first Fibonacci numbers
      * 
@@ -39,37 +39,25 @@ public class FibonacciNumberPrinter {
      *                                        starting with first Fibonacci number
      */
     public void printFirstFibonacciNumbers( final int wantedNumberOfFibonacciNumbers ){
-        //vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-        //###
-        //###
-        //###
-        //###           HIER kommt Ihr Code hin
-        //###
-        //###                    VVVV
-        //###                    VVVV
-        //###                    VVVV
-        //###   VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###      VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###         VVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###            VVVVVVVVVVVVVVVVVVVV
-        //###               VVVVVVVVVVVVVV
-        //###                  VVVVVVVV
-        //###                     VV
+
+        //Deklarieren
+        int fibu1 = 0;
+        int fibu2 = 0;
+        int currentFibu = 0;       
+
+        for ( int index = 0; index < wantedNumberOfFibonacciNumbers; index++ ) {
+            //add Currentfibu
+            fibu1 = fibu2;
+            fibu2 = currentFibu;
+            currentFibu = fibu1 + fibu2;
         
-        
-        
-        // Fügen Sie hier Ihren Code ein
-        // bzw. ersetzen Sie diesen Kommentar durch Ihren Code.
-        // Zerlegen Sie "number" in seine Primfaktoren.
-        // ...
-        
-        
-        
-        //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        // Sofern Sie kein Vorwissen haben und/oder NICHT wissen was Sie tun
-        // führen Sie KEINE! Änderungen unterhalb dieser Zeilen durch.
-        //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        //
+            //print
+            System.out.printf("%3d ", currentFibu);
+            
+            if (index == 0) fibu2++;
+            
+        }//for 
+
     }//method()
-    
+
 }//class

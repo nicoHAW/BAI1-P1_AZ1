@@ -33,34 +33,34 @@ public class ProposalForAlternativeTestFrameAndStarter {
             final FibonacciNumberPrinter fnp = new FibonacciNumberPrinter();
             
             
-            
-            //VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-            // Sofern Sie kein Vorwissen und/oder NICHT wissen was Sie tun
-            // fuehren Sie (bis auf die Aenderung des Klassennamens)
-            // KEINE Aenderungen oberhalb dieser Zeilen durch
-            //###
-            //###
-            //###
-            //###   HIER kommt Ihr Code zum Testen hin ;-)
-            //###
-            //###                    VVVV
-            //###                    VVVV
-            //###                    VVVV
-            //###   VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-            //###      VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-            //###         VVVVVVVVVVVVVVVVVVVVVVVVVV
-            //###            VVVVVVVVVVVVVVVVVVVV
-            //###               VVVVVVVVVVVVVV
-            //###                  VVVVVVVV
-            //###                     VV
+           
             
             
             // Z.B. bzw. nur als erste Start-Idee/Anregung, wie so etwas aussehen koennte
+            
             fnp.printFirstFibonacciNumbers( 5 );
             System.out.print( "\n\n\n" );
+            
+            
+            fnp.printFirstFibonacciNumbers( 1 );
+            System.out.print( "\n\n\n" );
+            
+            
+            fnp.printFirstFibonacciNumbers( 2 );
+            System.out.print( "\n\n\n" );
+            
+            
+            fnp.printFirstFibonacciNumbers( 3 );
+            System.out.print( "\n\n\n" );
+            
+            
+            fnp.printFirstFibonacciNumbers( 5 );
+            System.out.print( "\n\n\n" );
+            
             fnp.printFirstFibonacciNumbers( 11 );
             System.out.print( "\n\n\n" );
-            //...
+            
+            
             
             
             
