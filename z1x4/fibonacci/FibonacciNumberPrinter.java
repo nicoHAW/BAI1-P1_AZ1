@@ -28,7 +28,7 @@ package fibonacci;
  * {@link FibonacciNumberPrinter} - see task.
  * 
  * @author   Nico Pätzel
- * @version  2024/08/06
+ * @version  2024/08/06 Version 2 (changed: added Tests)
  */
 public class FibonacciNumberPrinter {
 
