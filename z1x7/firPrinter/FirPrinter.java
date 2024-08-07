@@ -22,7 +22,7 @@ package firPrinter;
  * {@link FirPrinter} - see task.
  * 
  * @author   Nico Pätzel 
- * @version  Version 1
+ * @version  2024/08/06 Version 1
  */
 public class FirPrinter {
 
@@ -37,21 +37,22 @@ public class FirPrinter {
 
 
         for (int i = 1; i <= height; i++) {
-            
+
             // Ausgabe der Punkte Links
             for (int j = 1; j <= height - i; j++) {
                 System.out.print(".");
             }
-            
+
             // Ausgabe der Sterne
             for (int k = 1; k <= 2 * i - 1; k++) {
                 System.out.print("*");
             }
-            
-         // Ausgabe der Punkte Rechts
+
+            // Ausgabe der Punkte Rechts
             for (int j = 1; j <= height - i; j++) {
                 System.out.print(".");
             }
+            
             System.out.println(); // Zeilenumbruch
         }
 

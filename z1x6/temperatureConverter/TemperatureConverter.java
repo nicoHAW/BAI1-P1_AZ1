@@ -22,7 +22,7 @@ package temperatureConverter;
  * {@link TemperatureConverter} - see task.
  * 
  * @author   Nico Pätzel 
- * @version  2024/08/06 Version 1
+ * @version  2024/08/06 Version 1.1 ( changed: just optic of table )
  */
 public class TemperatureConverter {
     
@@ -41,8 +41,8 @@ public class TemperatureConverter {
         
         System.out.printf( "Temperatur-Umrechnungstabele\n" );
         System.out.printf( "=============================\n" );
-        System.out.printf( "C          F\n" );
-        System.out.printf( "------------\n" );
+        System.out.printf( "   C        F\n" );
+        System.out.printf( "---------------\n" );
         
         while ( tempCelsius < 100 ) {
         
