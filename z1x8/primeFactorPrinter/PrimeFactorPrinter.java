@@ -21,46 +21,45 @@ package primeFactorPrinter;
 /**
  * PFP :  {@link PrimeFactorPrinter} - see task.
  * 
- * @author   (your name(s)) 
- * @version  (a version number or a date)
+ * @author   Nico Pätzel 
+ * @version  2024/08/07 Version 1
  */
 public class PrimeFactorPrinter {
-    
+
     /**
      * print factorization of given number
      * 
      * @param number the number to be factorized
      */
     public void printFactorization( long number ){
-        //vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-        //###
-        //###
-        //###
-        //###           HIER kommt Ihr Code hin
-        //###
-        //###                    VVVV
-        //###                    VVVV
-        //###                    VVVV
-        //###   VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###      VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###         VVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###            VVVVVVVVVVVVVVVVVVVV
-        //###               VVVVVVVVVVVVVV
-        //###                  VVVVVVVV
-        //###                     VV
+        //assert for a number bigger than 1
+        assert ( number > 1 ) : "Enter a Number bigger than 1";
         
         
-        
-        // Fügen Sie hier Ihren Code ein
-        // bzw. ersetzen Sie diesen Kommentar durch Ihren Code.
-        // Zerlegen Sie "number" in seine Primfaktoren.
-        // Sie können hierfür die nachfolgende Methode:
-        //      "long integerSquareRoot( long )"
-        // nutzen.
-        // ...
+         //handle the small primes.
+        if ( number <= 3 ) System.out.printf("1*", number);
         
         
-        
+        //declare
+        long divisor = 2;
+
+        while (divisor <= number) {
+
+            if (number%divisor==0 ) {
+                
+                System.out.printf("%d", divisor);
+                number = (number/divisor);
+                
+                if (number != 1) System.out.printf("*");
+            
+            } else {
+                divisor++;
+            }
+        }// while
+
+
+
+
         //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         // Sofern Sie kein Vorwissen haben und/oder NICHT wissen was Sie tun
         // führen Sie KEINE! Änderungen unterhalb dieser Zeilen durch.
@@ -68,16 +67,16 @@ public class PrimeFactorPrinter {
         //
         System.out.flush();
     }//method()
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
     // Den folgenden Code selbst müssen Sie NICHT verstehen!
     // Wichtig für Sie ist nur das Interface.
     //      long integerSquareRoot( long )
@@ -115,38 +114,38 @@ public class PrimeFactorPrinter {
      */
     public long integerSquareRoot( final long value ){
         if( 0 > value )  throw new IllegalArgumentException( String.format( "Parameter %d has to be positive",  value ));
-        
-        
+
+
         long approximation = 0;                                                 // the approximation itself
         if( value < (1L<<62) ){
             //\=> can be handled the fast way
-            
+
             // determine msb position of approximation resp. later sqrt  resp. start position of "walking one setter"
             long tmp = value;                                                   // temporary to determine maxb position of approximation
             int currentBitPosition = 0;                                         // current bit position where setting of bit is tested
             if( 0 < tmp ){
                 tmp >>>= 2;
-                approximation = 1;
-                while( 0 < tmp ){
-                    tmp >>>= 2;
-                    approximation <<= 1;
-                    currentBitPosition++;
-                }//while
-                
-                // start of actual integer square root computation
-                // compute integer square root with: w = integerSqrt(x)    =>    (w+1)*(w+1) > x  &&  w*w <= x 
-                long remainder = value - (approximation<<currentBitPosition);
-                do{
-                    final long refinement = 1L<<currentBitPosition;
-                    final long trialResult =  remainder  -  (((approximation<<1) + refinement) << currentBitPosition);
-                    if( 0 <= trialResult ){
-                        remainder = trialResult;
-                        approximation += refinement;
-                    }//while
-                    currentBitPosition--;
-                }while( currentBitPosition >= 0 );
+        approximation = 1;
+        while( 0 < tmp ){
+            tmp >>>= 2;
+        approximation <<= 1;
+        currentBitPosition++;
+        }//while
+
+        // start of actual integer square root computation
+        // compute integer square root with: w = integerSqrt(x)    =>    (w+1)*(w+1) > x  &&  w*w <= x 
+        long remainder = value - (approximation<<currentBitPosition);
+        do{
+            final long refinement = 1L<<currentBitPosition;
+            final long trialResult =  remainder  -  (((approximation<<1) + refinement) << currentBitPosition);
+            if( 0 <= trialResult ){
+                remainder = trialResult;
+                approximation += refinement;
+            }//while
+            currentBitPosition--;
+        }while( currentBitPosition >= 0 );
             }//if
-            
+
         }else{
             //\=> Math.sqrt() is used that might result in rounding errors less or equal than +/-512
             // and further:
@@ -190,8 +189,8 @@ public class PrimeFactorPrinter {
                 }//if
             }//if
         }//if
-        
+
         return approximation;
     }//method()
-    
+
 }//class

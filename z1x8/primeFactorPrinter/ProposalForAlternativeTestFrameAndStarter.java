@@ -36,36 +36,10 @@ public class ProposalForAlternativeTestFrameAndStarter {
             final PrimeFactorPrinter pfp = new PrimeFactorPrinter();
             
             
-            
-            //VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-            // Sofern Sie kein Vorwissen haben und/oder NICHT wissen was Sie tun
-            // führen Sie (bis auf die Änderung des Klassennamens)
-            // KEINE Änderungen oberhalb dieser Zeilen durch
-            //###
-            //###
-            //###
-            //###   HIER kommt Ihr Code zum Testen hin ;-)
-            //###
-            //###                    VVVV
-            //###                    VVVV
-            //###                    VVVV
-            //###   VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-            //###      VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-            //###         VVVVVVVVVVVVVVVVVVVVVVVVVV
-            //###            VVVVVVVVVVVVVVVVVVVV
-            //###               VVVVVVVVVVVVVV
-            //###                  VVVVVVVV
-            //###                     VV
-            
-            
             // Z.B. bzw. nur als erste Start-Idee/Anregung, wie so etwas aussehen koennte
-            pfp.printFactorization( 24 );
+            //
+            pfp.printFactorization( 768 );
             System.out.print( "\n\n\n" );
-            pfp.printFactorization( 51 );
-            System.out.print( "\n\n\n" );
-            //...
-            
-            
             
             
             
