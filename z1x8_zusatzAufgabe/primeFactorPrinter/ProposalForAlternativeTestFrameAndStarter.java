@@ -38,7 +38,7 @@ public class ProposalForAlternativeTestFrameAndStarter {
             
             // Z.B. bzw. nur als erste Start-Idee/Anregung, wie so etwas aussehen koennte
             //
-            pfp.printFactorization( 768 );
+            pfp.printFactorization( 6 );
             System.out.print( "\n\n\n" );
             
             

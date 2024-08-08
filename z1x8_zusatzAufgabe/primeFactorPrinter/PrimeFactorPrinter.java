@@ -37,22 +37,22 @@ public class PrimeFactorPrinter {
 
 
         //handle the small primes.
-        if ( number <= 3 ) System.out.printf("1*%d", number);
+       // if ( number <= 3 ) System.out.printf("1*%d", number);
 
         //Sqrt of Number because divisor cant be bigger that Sqrt of Number.
-        long numberSqrt = (long)( Math.sqrt(number) );
+        long numberSqrt = integerSquareRoot(number);
 
 
         //declare
         long divisor = 2;
         long tmpnumber = number;
 
-        while (number > numberSqrt) {
+        while ( divisor <= numberSqrt ) {   // alternative idea: while ( divisor <= numberSqrt ) || ( numberSqrt <= number )
 
             if (number%divisor==0 ) {
                 
                 System.out.printf("%d", divisor);
-                number = (number/divisor);
+                number /= divisor;
 
                 if (number != 1) System.out.printf("*");
 
@@ -61,7 +61,7 @@ public class PrimeFactorPrinter {
             }//if-else
 
             //if divisor reachers Sqrt, there is no divisor.
-         if ((divisor > numberSqrt) && (tmpnumber == number)) System.out.printf("1*%d", number);
+         if ((divisor > numberSqrt) && (tmpnumber == number)) System.out.printf("%d", number);
 
         }// while
 
