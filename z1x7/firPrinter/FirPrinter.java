@@ -21,47 +21,54 @@ package firPrinter;
 /**
  * {@link FirPrinter} - see task.
  * 
- * @author   (your name(s)) 
- * @version  (a version number or a date)
+ * @author   Nico Pätzel 
+ * @version  2024/08/06 Version 1
  */
 public class FirPrinter {
-    
+
     /**
      * print fir
      * 
      * @param height height of fir
      */
     public void printFir( int height ){
-        //vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-        //###
-        //###
-        //###
-        //###           HIER kommt Ihr Code hin
-        //###
-        //###                    VVVV
-        //###                    VVVV
-        //###                    VVVV
-        //###   VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###      VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###         VVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###            VVVVVVVVVVVVVVVVVVVV
-        //###               VVVVVVVVVVVVVV
-        //###                  VVVVVVVV
-        //###                     VV
-        
-        
-        
+
+        assert ( height > 0 ) : "Please enter valid heigth > 0.";
+
+
+        for (int i = 1; i <= height; i++) {
+
+            // Ausgabe der Punkte Links
+            for (int j = 1; j <= height - i; j++) {
+                System.out.print(".");
+            }
+
+            // Ausgabe der Sterne
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+
+            // Ausgabe der Punkte Rechts
+            for (int j = 1; j <= height - i; j++) {
+                System.out.print(".");
+            }
+            
+            System.out.println(); // Zeilenumbruch
+        }
+
+
+
         // Fügen Sie hier Ihren Code ein
         // bzw. ersetzen Sie diesen Kommentar durch Ihren Code.
         // ...
-        
-        
-        
+
+
+
         //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         // Sofern Sie kein Vorwissen haben und/oder NICHT wissen was Sie tun
         // führen Sie KEINE! Änderungen unterhalb dieser Zeilen durch.
         //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         //
     }//method()
-    
+
 }//class

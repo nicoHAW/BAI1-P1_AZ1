@@ -1,5 +1,8 @@
 // This source code is UTF-8 coded - see https://stackoverflow.com/questions/9180981/how-to-support-utf-8-encoding-in-eclipse
-package fibonacci;
+package primeFactorPrinter;
+
+
+import stuffBeginnersDontHaveToUnderstand.Herald;
 
 
 //###
@@ -16,9 +19,9 @@ package fibonacci;
 //### haben.
 //###
 /**
- * Your alternative TestFrame for Fibonacci Number Printer
+ * Your alternative TestFrame for {@link PrimeFactorPrinter}.
  * 
- * @author   (your name(s)) based on template from Michael Schaefers 
+ * @author   (your name(s))  based on template from Michael Schaefers
  * @version  (a version number or a date)
  */
 public class ProposalForAlternativeTestFrameAndStarter {
@@ -30,56 +33,32 @@ public class ProposalForAlternativeTestFrameAndStarter {
      */
     public static void main( final String... unused ){
         try{
-            final FibonacciNumberPrinter fnp = new FibonacciNumberPrinter();
-            
-            
-           
+            final PrimeFactorPrinter pfp = new PrimeFactorPrinter();
             
             
             // Z.B. bzw. nur als erste Start-Idee/Anregung, wie so etwas aussehen koennte
-            
-            fnp.printFirstFibonacciNumbers( 5 );
+            //
+            pfp.printFactorization( 6 );
             System.out.print( "\n\n\n" );
-            
-            
-            fnp.printFirstFibonacciNumbers( 1 );
-            System.out.print( "\n\n\n" );
-            
-            
-            fnp.printFirstFibonacciNumbers( 2 );
-            System.out.print( "\n\n\n" );
-            
-            
-            fnp.printFirstFibonacciNumbers( 3 );
-            System.out.print( "\n\n\n" );
-            
-            
-            fnp.printFirstFibonacciNumbers( 5 );
-            System.out.print( "\n\n\n" );
-            
-            fnp.printFirstFibonacciNumbers( 11 );
-            System.out.print( "\n\n\n" );
-            
-            
-            
-            
             
             
             
             //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             // Sofern Sie kein Vorwissen haben und/oder NICHT wissen was Sie tun
-            // fuehren Sie KEINE Aenderungen unterhalb dieser Zeilen durch.
+            // führen Sie KEINE Änderungen unterhalb dieser Zeilen durch.
             //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             //
             System.out.printf( "\n\n" );
             System.out.printf( "THIS IS THE END" );
+            System.out.flush();
+            
         }catch( final Throwable ex ){
             if( ! (( ex instanceof AssertionError ) || ( ex instanceof IllegalArgumentException ))){
-                System.out.flush();
-                System.err.printf( "###\n" );
-                System.err.printf( "### Uuuupppss, was ist denn da passiert ????\n" );
-                System.err.printf( "###\n" );
-                System.err.printf( "\n" );
+                final StringBuilder sb = new StringBuilder( "\n" );
+                sb.append( "###\n" );
+                sb.append( "### Uuuupppss, was ist denn da passiert ????\n" );
+                sb.append( "###\n" );
+                Herald.proclaimError( sb );
             }//if
             throw( ex );
         }//try

@@ -21,8 +21,8 @@ package medal;
 /**
  * {@link SportMedalComputer} - see task.
  * 
- * @author   (your name(s)) 
- * @version  (a version number or a date)
+ * @author   Nico Pätzel
+ * @version  2024/08/06 Version 1
  */
 public class SportMedalComputer {
     
@@ -37,29 +37,7 @@ public class SportMedalComputer {
         int    points,  // Punkte die Teilnehmer im Wettkampf erworben hat
         int    age      // Alter des jeweiligen Teilnehmers
     ){
-        //vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-        //###
-        //###
-        //###
-        //###           HIER kommt Ihr Code hin
-        //###
-        //###                    VVVV
-        //###                    VVVV
-        //###                    VVVV
-        //###   VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###      VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###         VVVVVVVVVVVVVVVVVVVVVVVVVV
-        //###            VVVVVVVVVVVVVVVVVVVV
-        //###               VVVVVVVVVVVVVV
-        //###                  VVVVVVVV
-        //###                     VV
-        
-        
-        
-        // Fügen Sie hier Ihren Code ein
-        // bzw. ersetzen Sie diesen Kommentar durch Ihren Code.
-        // ...
-        
+
         
         // "Code-Vorgabe"
         
@@ -73,12 +51,23 @@ public class SportMedalComputer {
         
         
         // Hier muss "sinnvoller" Code hin.
-        // "Irgendwo" müssen Sie der Medaille den richtigen Wert zu weisen.        
-        medal = "Gold";    // Medaille auf Gold setzen
-        medal = "Silber";  // Medaille auf Silber setzen
-        medal = "Bronze";  // Medaille auf Bronze setzen
-        
-        
+        // "Irgendwo" müssen Sie der Medaille den richtigen Wert zu weisen.
+
+    /*      medal = "Gold";    // Medaille auf Gold setzen
+    *       medal = "Silber";  // Medaille auf Silber setzen
+    *       medal = "Bronze";  // Medaille auf Bronze setzen
+    */
+
+        if (age <= 13 ) {
+            if ( points < 3000 ) medal = "Bronze";
+            if ( points >= 3000 && points <= 3999) medal = "Silber";
+            if ( points >= 4000) medal = "Gold";
+        } else if (age >= 14) {
+            if ( points < 4000 ) medal = "Bronze";
+            if ( points >= 4000 && points <= 4999) medal = "Silber";
+            if ( points >= 5000) medal = "Gold";
+        }
+
         return medal;
         //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         // Sofern Sie kein Vorwissen haben und/oder NICHT wissen was Sie tun

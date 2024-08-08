@@ -28,32 +28,30 @@ public class ProposalForAlternativeTestFrameAndStarter {
             final RequiredBitSizeComputer requiredBitSizeComputer = new RequiredBitSizeComputer();
             
             
-            
-            //VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-            // Sofern Sie kein Vorwissen und/oder NICHT wissen was Sie tun
-            // fuehren Sie (bis auf die Aenderung des Klassennamens)
-            // KEINE Aenderungen oberhalb dieser Zeilen durch
-            //###
-            //###
-            //###
-            //###   HIER kommt Ihr Code zum Testen hin ;-)
-            //###
-            //###                    VVVV
-            //###                    VVVV
-            //###                    VVVV
-            //###   VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-            //###      VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-            //###         VVVVVVVVVVVVVVVVVVVVVVVVVV
-            //###            VVVVVVVVVVVVVVVVVVVV
-            //###               VVVVVVVVVVVVVV
-            //###                  VVVVVVVV
-            //###                     VV
-            
-            
-            
-            // Z.B. bzw. nur als erste Start-Idee/Anregung, wie so etwas aussehen koennte
+           
             long number;
             int bitSize;
+            
+            //
+            number = 1;
+            bitSize = requiredBitSizeComputer.computeBitSize( number );
+            System.out.printf( "Fuer die Zahl %d werden %d Bit(s) benoetigt.\n",  number, bitSize );
+            System.out.print( "\n\n" );
+            //
+            number = 1;
+            bitSize = requiredBitSizeComputer.computeBitSize( number );
+            System.out.printf( "Fuer die Zahl %d werden %d Bit(s) benoetigt.\n",  number, bitSize );
+            System.out.print( "\n\n" );
+            //
+            number = 2;
+            bitSize = requiredBitSizeComputer.computeBitSize( number );
+            System.out.printf( "Fuer die Zahl %d werden %d Bit(s) benoetigt.\n",  number, bitSize );
+            System.out.print( "\n\n" );
+            //
+            number = 4;
+            bitSize = requiredBitSizeComputer.computeBitSize( number );
+            System.out.printf( "Fuer die Zahl %d werden %d Bit(s) benoetigt.\n",  number, bitSize );
+            System.out.print( "\n\n" );
             //
             number = 100;
             bitSize = requiredBitSizeComputer.computeBitSize( number );

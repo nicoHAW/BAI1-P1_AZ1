@@ -16,13 +16,13 @@ package firPrinter;
 //### haben.
 //###
 /**
-* Your alternative TestFrame for {@link FirPrinter}.
-* 
-* @author   (your name(s))  based on template from Michael Schaefers
-* @version  (a version number or a date)
+ * Your alternative TestFrame for {@link FirPrinter}.
+ * 
+ * @author   (your name(s))  based on template from Michael Schaefers
+ * @version  (a version number or a date)
  */
 public class ProposalForAlternativeTestFrameAndStarter {
-    
+
     /**
      * method to start test
      * 
@@ -31,41 +31,21 @@ public class ProposalForAlternativeTestFrameAndStarter {
     public static void main( final String... unused ){
         try{
             final FirPrinter fp = new FirPrinter();
-            
-            
-            
-            //VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-            // Sofern Sie kein Vorwissen haben und/oder NICHT wissen was Sie tun
-            // fuehren Sie (bis auf die Aenderung des Klassennamens)
-            // KEINE Aenderungen oberhalb dieser Zeilen durch
-            //###
-            //###
-            //###
-            //###   HIER kommt Ihr Code zum Testen hin ;-)
-            //###
-            //###                    VVVV
-            //###                    VVVV
-            //###                    VVVV
-            //###   VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-            //###      VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-            //###         VVVVVVVVVVVVVVVVVVVVVVVVVV
-            //###            VVVVVVVVVVVVVVVVVVVV
-            //###               VVVVVVVVVVVVVV
-            //###                  VVVVVVVV
-            //###                     VV
-            
-            
+
+
+
+
+
             // Z.B. bzw. nur als erste Start-Idee/Anregung, wie so etwas aussehen koennte
-            fp.printFir( 7 );
+            //
+            fp.printFir( 4 );
             System.out.print( "\n\n\n" );
-            fp.printFir( 9 );
-            System.out.print( "\n\n\n" );
-            //...
-            
-            
-            
-            
-            
+
+
+
+
+
+
             //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             // Sofern Sie kein Vorwissen haben und/oder NICHT wissen was Sie tun
             // fuehren Sie KEINE Aenderungen unterhalb dieser Zeilen durch.
@@ -84,5 +64,5 @@ public class ProposalForAlternativeTestFrameAndStarter {
             throw( ex );
         }//try
     }//method()
-    
+
 }//class
