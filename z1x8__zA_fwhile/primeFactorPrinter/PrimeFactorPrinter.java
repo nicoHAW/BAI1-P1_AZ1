@@ -36,37 +36,33 @@ public class PrimeFactorPrinter {
         assert ( number > 1 ) : "Enter a Number bigger than 1";
 
 
-        //handle the small primes.
-       // if ( number <= 3 ) System.out.printf("1*%d", number);
-
-        //Sqrt of Number because divisor cant be bigger that Sqrt of Number.
+        long divisor = 2;
+        long tmpnumber = number;
         long numberSqrt = integerSquareRoot(number);
 
 
-        //declare
-        long divisor = 2;
-        long tmpnumber = number;
+        while ( divisor <= numberSqrt ) { 
 
-        while ( divisor <= numberSqrt ) {   // alternative idea: while ( divisor <= numberSqrt ) || ( numberSqrt <= number )
+            if (tmpnumber%divisor==0 ) {
 
-            if (number%divisor==0 ) {
-                
                 System.out.printf("%d", divisor);
-                number /= divisor;
+                tmpnumber /= divisor;
+                numberSqrt = integerSquareRoot(tmpnumber);
 
-                if (number != 1) System.out.printf("*");
+                if (tmpnumber != 1) System.out.printf("*");
 
             } else {
                 divisor++;
             }//if-else
-
-            //if divisor reachers Sqrt, there is no divisor.
-         if ((divisor > numberSqrt) && (tmpnumber == number)) System.out.printf("%d", number);
-
         }// while
+        System.out.printf("%d", tmpnumber);
 
 
 
+        
+        
+        
+        
 
         //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         // Sofern Sie kein Vorwissen haben und/oder NICHT wissen was Sie tun
