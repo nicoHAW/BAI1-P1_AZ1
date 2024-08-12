@@ -22,7 +22,7 @@ package primeFactorPrinter;
  * PFP :  {@link PrimeFactorPrinter} - see task.
  * 
  * @author   Nico Pätzel 
- * @version  2024/08/07 Version 1
+ * @version  2024/08/12 Version 1 ( fixed: last print only if wrkNumber > 1 )
  */
 public class PrimeFactorPrinter {
 
@@ -36,24 +36,24 @@ public class PrimeFactorPrinter {
         assert ( number > 1 ) : "Enter a Number bigger than 1";
 
 
-        long tmpnumber = number;
+        long tmpNumber = number;
         long numberSqrt = integerSquareRoot(number);
 
 
         for ( long divisor = 2; divisor <= numberSqrt; divisor++ ) { 
 
-            while (tmpnumber % divisor == 0 ) {
+            while (tmpNumber % divisor == 0 ) {
                 System.out.printf("%d", divisor);
 
-                tmpnumber /= divisor;
-                numberSqrt = integerSquareRoot(tmpnumber);
+                tmpNumber /= divisor;
+                numberSqrt = integerSquareRoot(tmpNumber);
 
-                if (tmpnumber != 1) System.out.printf("*");
+                if (tmpNumber != 1) System.out.printf("*");
 
             }//while
         }// for
 
-        System.out.printf("%d", tmpnumber);
+        if (tmpNumber > 1) System.out.printf("%d", tmpNumber);
 
 
 
