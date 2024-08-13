@@ -34,19 +34,27 @@ public class PrimeFactorPrinter {
     public void printFactorization( long number ){
         //assert for a number bigger than 1
         assert ( number > 1 ) : "Enter a Number bigger than 1";
-
-
-        //handle the small primes.
+        
+        
+         //handle the small primes.
         if ( number <= 3 ) System.out.printf("1*", number);
+        
+        
+        //declare
+        long divisor = 2;
 
-        for (long divisor = 2; divisor <= number; divisor++) {
-            
-            while (number%divisor==0 ) {
+        while (divisor <= number) {
+
+            if (number%divisor==0 ) {
+                
                 System.out.printf("%d", divisor);
                 number = (number/divisor);
                 
                 if (number != 1) System.out.printf("*");
-            } 
+            
+            } else {
+                divisor++;
+            }
         }// while
 
 
